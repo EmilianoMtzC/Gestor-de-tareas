@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+nav{
+    background: rgba(19,7,70,0.83);
+    padding: 1em 1em;
+    color: white;
+    text-align: center;
+}
+
+.gestor {
+    background: rgba(13,4,45,0.86);
+    display: flex;
+    padding: 1em 2em;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.barraGestion{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0 10em;
+
+}
+
+.tipoTarea{
+    display: flex;
+    padding: 0;
+
+}
+
+.tipoTarea ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin: 0;
+    color: white;
+}
+
+.tipoTarea button{
+    background: rgba(61,65,127,0.74);
+    border: none;
+    border-radius: 5em;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+.añadirTarea button{
+    background: rgba(61,65,127,0.74);
+    border: none;
+    border-radius: 5em;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+.agregarTarea{
+    display: flex;
+}
