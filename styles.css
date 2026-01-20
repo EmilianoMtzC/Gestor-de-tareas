@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
 
 
+
 }
 
 
@@ -77,15 +78,16 @@ nav{
 .formulario{
     background: rgba(13,4,45,0.86);
     display: flex;
-    justify-content: center;
+
     align-items: center;
     flex-direction: column;
     padding: 3em 10em 8.8em 10em;
+    height: 100vh;
 }
 
 .listaTareas{
     background: rgba(20, 20, 56, 0.51);
-    padding: 1em 2em 1em 0;
+    padding: 1em 1em 1em 0;
     border: none;
     border-radius: 3em;
     height: auto;
