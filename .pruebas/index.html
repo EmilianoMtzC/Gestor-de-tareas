@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="bonito.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h1>NextTask</h1>
+    </nav>
+</header>
+<main>
+    <section class="gestor" id="inicio">
+        <div class="barraGestion">
+            <div class="tipoTarea">
+                <ul>
+                    <li><button id="btnTodas" class="activo">Todas</button></li>
+                    <li><button id="btnCompletadas">Completadas</button></li>
+                    <li><button id="btnPendientes">Pendientes</button></li>
+                </ul>
+            </div>
+            <div class="añadirTarea">
+                <button id="btnAbrirModal">+ Nueva Tarea</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulario" id="formulario">
+        <div class="listaTareas">
+            <table class="tabla-tareas">
+                <tbody id="contenedor-tareas"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<div id="miModal" class="modal">
+    <div class="modal-contenido">
+        <h2>Nueva Tarea</h2>
+        <input type="text" id="inputTarea" placeholder="Describe tu tarea aquí...">
+        <div class="modal-botones">
+            <button id="btnCancelar">Cancelar</button>
+            <button id="btnGuardar">Guardar</button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <h1>Gestor de Tareas</h1>
+            <h1>NextTask</h1>
         </nav>
     </header>
     <main>
@@ -19,28 +19,43 @@
 
                 <div class = "tipoTarea">
                     <ul>
-                        <li><button>Todas</button></li>
-                        <li><button>Completadas</button></li>
-                        <li><button>Pendientes</button></li>
+                        <li><button id="show_all">Todas</button></li>
+                        <li><button id="finished_tasks">Completadas</button></li>
+                        <li><button id="pending_tasks">Pendientes</button></li>
                     </ul>
                 </div>
                 <div class="añadirTarea">
-                    <button>+ Nueva Tarea</button>
-                </div>
-
-            </div>
-
-            <div class="listaTareas">
-                <div class="tareas">
+                    <button id="new_task">+ Nueva Tarea</button>
                 </div>
             </div>
         </section>
 
+        <section class="formulario" id="formulario">
+
+            <div class="listaTareas">
+                <table class="tabla-tareas">
+                    <tbody id="contenedor-tareas"></tbody>
+                </table>
+            </div>
+
+        </section>
     </main>
-
     <footer>
-
+        <div class="footer-content">
+            <a href="https://github.com/EmilianoMtzC/Gestor-de-tareas" target="_blank">GitHub Repository</a>
+        </div>
     </footer>
+
+    <div id="modalTarea" class="modal">
+        <div class="modal-content">
+            <h3>Nueva Tarea</h3>
+            <input type="text" id="inputTarea" placeholder="Describe la tarea...">
+            <div class="modal-botones">
+                <button id="cancel">Cancelar</button>
+                <button id="save">Guardar</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

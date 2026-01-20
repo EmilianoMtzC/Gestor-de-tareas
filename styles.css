@@ -4,11 +4,13 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 
+
 }
+
 
 nav{
     background: rgba(19,7,70,0.83);
-    padding: 1em 1em;
+    padding: 2em 1em;
     color: white;
     text-align: center;
 }
@@ -16,7 +18,7 @@ nav{
 .gestor {
     background: rgba(13,4,45,0.86);
     display: flex;
-    padding: 1em 2em;
+    padding: 4em 2em 0 2em;
     justify-content: space-around;
     align-items: center;
 
@@ -24,9 +26,12 @@ nav{
 
 .barraGestion{
     display: flex;
+    background: rgba(20, 20, 56, 0.51);
+    border: none;
+    border-radius: 3em;
     justify-content: space-between;
-    width: 100vw;
-    padding: 0 10em;
+    width: 90em;
+    padding: 1.5em 3em;
 
 }
 
@@ -46,20 +51,172 @@ nav{
 
 .tipoTarea button{
     background: rgba(61,65,127,0.74);
+    font-size: 1.2em;
     border: none;
-    border-radius: 5em;
-    padding: 0.5em 1em;
+    border-radius: 2em;
+    padding: 1em 2em;
     color: white;
+    cursor: pointer;
 }
 
 .añadirTarea button{
     background: rgba(61,65,127,0.74);
     border: none;
-    border-radius: 5em;
-    padding: 0.5em 1em;
+    font-size: 1.2em;
+    border-radius: 2em;
+    padding: 1em 2em;
     color: white;
+    cursor: pointer;
 }
 
 .agregarTarea{
     display: flex;
+
+}
+
+.formulario{
+    background: rgba(13,4,45,0.86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em 10em 8.8em 10em;
+}
+
+.listaTareas{
+    background: rgba(20, 20, 56, 0.51);
+    padding: 1em 2em 1em 0;
+    border: none;
+    border-radius: 3em;
+    height: auto;
+    width: 90em;
+
+}
+
+/* Ajustes para la tabla */
+.tabla-tareas {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Crea el espacio entre filas del diseño */
+}
+
+.tabla-tareas tr {
+    background-color: transparent;
+    border: none;
+    border-radius: 1em;
+
+}
+
+.tabla-tareas td {
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.tabla-tareas button{
+    background: rgba(61,65,127,0.74);
+    border: none;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bordes redondeados para las esquinas de las filas */
+.tabla-tareas tr td:first-child {
+    border-radius: 1em;
+    padding-left: 2em;
+}
+.tabla-tareas tr td:last-child {
+    border-radius: 1em;
+    padding-right: 2em;
+    text-align: right;
+}
+
+/* Texto del estado */
+.estado-texto {
+    color: #888;
+    font-style: italic;
+}
+
+/* El contenedor del modal (fondo oscuro) */
+.modal {
+    display: none; /* Se activa con JavaScript */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* El cuadro blanco del modal */
+.modal-content {
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 1.5em;
+    width: 400px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-bottom: 1em;
+    color: #130746;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+/* Reutilizamos el estilo de tus botones */
+#save {
+    background: #3d417f;
+    color: white;
+    border: none;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+#cancel {
+    background: #ff5c33;
+    color: white;
+    border: none;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.footer{
+    padding: 0;
+}
+
+.footer-content{
+    background: rgba(19,7,70,0.83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em;
+    color: white;
+}
+
+.footer-content a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
 }
