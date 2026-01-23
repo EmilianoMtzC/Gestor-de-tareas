@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Tareas</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
 </head>
 <body>
     <header>
@@ -14,27 +14,33 @@
         </nav>
     </header>
     <main>
-        <section class="gestor" id="inicio">
-            <div class="barraGestion">
+        <section class="manager" id="start">
+            <div class="manager-bar">
 
-                <div class = "tipoTarea">
+                <div class = "task-status">
                     <ul>
                         <li><button id="show_all">Todas</button></li>
                         <li><button id="finished_tasks">Completadas</button></li>
                         <li><button id="pending_tasks">Pendientes</button></li>
                     </ul>
                 </div>
-                <div class="añadirTarea">
+                <div class="add-task">
                     <button id="new_task">+ Nueva Tarea</button>
                 </div>
             </div>
         </section>
 
-        <section class="formulario" id="formulario">
+        <section class="task-display" id="task-display">
 
-            <div class="listaTareas">
-                <table class="tabla-tareas">
-                    <tbody id="contenedor-tareas"></tbody>
+            <div class="task-section">
+                <table class="task-table">
+                    <tbody id="task-container">
+                        <tr>
+                            <th>Tasks</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -46,16 +52,17 @@
         </div>
     </footer>
 
-    <div id="modalTarea" class="modal">
-        <div class="modal-content">
+    <div id="new-task-window" class="window">
+        <div class="window-content">
             <h3>Nueva Tarea</h3>
-            <input type="text" id="inputTarea" placeholder="Describe la tarea...">
-            <div class="modal-botones">
+            <input type="text" id="task-input" placeholder="Describe la tarea...">
+            <div class="window-buttons">
                 <button id="cancel">Cancelar</button>
                 <button id="save">Guardar</button>
             </div>
         </div>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>
