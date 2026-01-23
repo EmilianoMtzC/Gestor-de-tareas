@@ -51,6 +51,53 @@
         resize: none;
         font-size: 0.6em;
       }
+
+      #problema4 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.2em;
+      }
+
+      #problema4 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.2em;
+      }
+
+      #problema5 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #listaInputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 0;
+      }
+
+      #listaInputs li input {
+        padding: 0.5em;
+      }
+
+      #formatear {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
     </style>
 
 </head>
@@ -101,10 +148,23 @@
   </section>
 
   <section class="ejercicio">
-    <div
+    <div id="problema5">
+      <h2>Formatear Nombre</h2>
+      <ul id="listaInputs">
+        <li><input type="text" id="nombre" placeholder="Ingresa tu nombre"></li>
+        <li><input type="text" id="apellidoPaterno" placeholder="Ingresa tu apellido paterno."></li>
+        <li><input type="text" id="apellidoMaterno" placeholder="Ingresa tu apellido materno."></li>
+      </ul>
+      <button id="formatear">Mostrar</button>
+      <p id="resultado"></p>
+    </div>
   </section>
 
-  <section class="ejercicio"></section>
+  <section class="ejercicio">
+    <div id="problema6">
+      <input type="number" id="numMinutos" placeholder="">
+    </div>
+  </section>
 
   <section class="ejercicio"></section>
 

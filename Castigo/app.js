@@ -69,15 +69,47 @@ msj.addEventListener("input", actualizarContador);
 
 // EJERCICIO 4
 const filtro = document.getElementById("filtro");
-const listaFiltros = document.getElementById("listaFiltros");
+const listaFiltros = document.getElementById("listaFiltro");
 const msjOpcional = document.getElementById("msjOpcional");
 
 const filtrar = () => {
+    const textoFiltro = filtro.value.toLowerCase();
+    const lista = listaFiltros.getElementsByTagName("li");
+    let coincidencias = 0;
 
+    for (let i = 0; i < lista.length; i++) {
+        const nombre = lista[i].textContent.toLowerCase();
+
+        if (nombre.includes(textoFiltro)){
+            lista[i].style.display = "";
+            coincidencias++;
+        } else {
+            lista[i].style.display = "none";
+        }
+    }
+
+    if (coincidencias === 0 && textoFiltro !== ""){
+        msjOpcional.innerHTML = "No hay coincidencias";
+    } else {
+        msjOpcional.innerHTML = "";
+    }
 }
-
 filtro.addEventListener("input", (filtrar));
 
+// EJERCICIO 5
+const nombre = document.getElementById("nombre");
+const apellidoPaterno = document.getElementById("apellidoPaterno");
+const apellidoMaterno = document.getElementById("apellidoMaterno");
+const formatear = document.getElementById("formatear");
+const resultado = document.getElementById("resultado");
+
+formatear.addEventListener("click", () => {
+    const nombreCompleto = `${apellidoPaterno.value} ${apellidoMaterno.value} ${nombre.value} `;
+    resultado.innerHTML = nombreCompleto.toUpperCase();
+});
+
+
+// EJERCICIO 6
 
 
 
