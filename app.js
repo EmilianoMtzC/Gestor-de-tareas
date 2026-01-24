@@ -29,26 +29,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // CONFIGURACIÓN DE LOS BOTONES DE LA VENTANA EMERGENTE
-    cancelBtn.addEventListener('click', closeWindow); // Boton cancelar
+    cancelBtn.addEventListener('click', closeWindow);
 
     window.addEventListener('click', (e) => {
         if (e.target === newTaskWindow) closeWindow();
     });
 
+    // CONFIGURACION DEL BOTON DE GUARDAR
     saveBtn.addEventListener('click', () => {
         const taskText = taskInput.value.trim();
         if (taskText === "") return alert("Por favor, introduce una tarea");
 
-        const newTask = {
-            id: Date.now(),
-            text: taskText,
-            state: "Pendiente..."
-        };
-        tasks.push(newTask);
+        if (editingId !== null) {
+            const index = tasks.findIndex(t => t.id === editingId);
+
+            if (index !== -1) {
+                tasks[index].text = taskText;
+            }
+            editingId = null;
+
+        } else {
+            const newTask = {
+                id: Date.now(),
+                text: taskText,
+                state: "Pendiente..."
+            };
+            tasks.push(newTask);
+        }
         closeWindow();
         renderTasks();
     });
 
+    // FUNCION PARA CAMBIAR EL ESTADO DE LA TAREA
     window.taskStatus = (id) => {
         const index = tasks.findIndex(t => t.id === id);
         if (tasks[index].state === "Pendiente...") {
@@ -59,14 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTasks();
     };
 
+    // FUNCION PARA EDITAR UNA TAREA
+    let editingId = null;
+    window.editTask = (id) => {
+        const taskToEdit = tasks.find(t => t.id === id);
+        if (taskToEdit) {
+            taskInput.value = taskToEdit.text;
+            editingId = id;
+            newTaskWindow.style.display = 'flex';
+            taskInput.focus();
+        }
+    }
+
+    // FUNCION PARA MOSTRAR LAS TAREAS
     function renderTasks() {
         taskContainer.innerHTML = `
-            <tr>
-                <th>Tasks</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        `;
+        <tr>
+            <th>Tasks</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    `;
 
         const showTasks = tasks.filter(t => {
             if (tasksFilter === "Completada") return t.state === "Completada";
@@ -81,16 +106,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonClass = isPending ? "pendiente" : "completada";
             const buttonText = isPending ? "Completar" : "Eliminar";
 
-            row.innerHTML = `
-                <td>${task.text}</td>
-                <td class="text-state">${task.state}</td>
-                <td>
-                    <button class="editBtn"></button>
-                    <button class="actionBtn ${buttonClass}" onclick="window.taskStatus(${task.id})">
-                        ${buttonText}
-                    </button>
-                </td>`;
 
+            row.innerHTML = `
+            <td>${task.text}</td>
+            <td class="text-state">${task.state}</td>
+            <td class="action-cell">
+                <button class="editBtn" onclick="window.editTask(${task.id})">Editar</button>
+                <button class="actionBtn ${buttonClass}" onclick="window.taskStatus(${task.id})">
+                    ${buttonText}
+                </button>
+            </td>`;
             taskContainer.appendChild(row);
         });
     }

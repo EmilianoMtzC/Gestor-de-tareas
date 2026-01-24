@@ -109,7 +109,7 @@ nav{
 #task-container tr {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 20em;
 
@@ -129,7 +129,15 @@ nav{
     justify-content: space-between;
     flex-direction: row;
     font-size: 1.2em;
-    padding: 1em 1em 2em 2em;
+    padding: 2em 1em 2em 0;
+}
+
+#task-container td:first-child {
+    max-width: 300px;       /* Ajusta este valor según tu diseño */
+    word-wrap: break-word;  /* Fuerza el salto de línea en palabras largas */
+    overflow-wrap: break-word;
+    white-space: normal;    /* Permite que el texto use varias líneas */
+    line-height: 1.4;       /* Mejora la legibilidad si hay varias líneas */
 }
 
 .footer{
@@ -182,7 +190,6 @@ nav{
 
 .window-content input {
     padding: 1em;
-    margin-bottom: 1.5em;
     border: 1px solid #ddd;
     border-radius: 10em;
     width: 20em;
@@ -209,6 +216,662 @@ nav{
     cursor: pointer;
 }
 
+.editBtn{
+    background: rgba(61,65,127,0.74);
+    border: none;
+    font-size: 1.2em;
+    border-radius: 2em;
+    height: 2em;
+    width: 6em;
+    color: white;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
 .text-state{
     font-size: 1.2em;
 }
+
+
+@media (max-width: 1450px) {
+
+    .manager {
+        background: rgba(13,4,45,0.86);
+        display: flex;
+        padding: 4em 2em 0 2em;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .manager-bar{
+        display: flex;
+        background: rgba(20, 20, 56, 0.51);
+        border: none;
+        border-radius: 3em;
+        justify-content: space-between;
+        width: 80em;
+        padding: 1.5em 3em;
+
+    }
+
+    .task-status{
+        display: flex;
+        padding: 0;
+
+    }
+
+    .task-status ul{
+        display: flex;
+        list-style: none;
+        gap: 1em;
+        margin: 0;
+        color: white;
+    }
+
+    .task-status button{
+        background: rgba(61,65,127,0.74);
+        font-size: 1.2em;
+        border: none;
+        border-radius: 2em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .add-task button{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .add-task{
+        display: flex;
+
+    }
+
+    .task-display{
+        background: rgba(13,4,45,0.86);
+        display: flex;
+
+        align-items: center;
+        flex-direction: column;
+        padding: 3em 10em 8.8em 10em;
+        height: 50em;
+    }
+
+    .task-table{
+        display: flex;
+        background: rgba(20, 20, 56, 0.51);
+        padding: 1.5em 3em 13em 5em;
+        flex-direction: row;
+        justify-content: flex-start;
+        border: none;
+        border-radius: 3em;
+        height: auto;
+        width: 80em;
+    }
+
+    #task-container{
+        display: table-row-group;
+        color: white;
+        gap: 1em;
+    }
+
+    #task-container tr {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16em;
+
+    }
+
+    #task-container th{
+        display: flex;
+        flex-direction: row;
+        font-size: 1.4em;
+        font-weight: bold;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    #task-container td{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-size: 1.2em;
+        padding: 2em 1em 2em 0;
+    }
+
+    #task-container td:first-child {
+        width: 188px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .window {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .window-content {
+        background-color: rgba(75,70,120,1);
+        padding: 2.5em 0 2.5em 0;
+        border-radius: 1.5em;
+        width: 400px;
+        text-align: center;
+    }
+
+    .window-content h3 {
+        margin-bottom: 1em;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6em;
+        padding: 0.2em;
+    }
+
+    .window-content button {
+        padding: 1em 2em;
+        background-color: rgba(61,90,170,0.5);
+        border: none;
+        border-radius: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .actionBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 6em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .editBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 6em;
+        color: white;
+        cursor: pointer;
+        margin-right: 1em;
+    }
+
+    .text-state{
+        font-size: 1.2em;
+    }
+
+}
+
+@media (max-width: 810px) {
+
+    .manager {
+        background: rgba(13,4,45,0.86);
+        display: flex;
+        padding: 4em 2em 0 2em;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .manager-bar{
+        display: flex;
+        background: rgba(20, 20, 56, 0.51);
+        border: none;
+        border-radius: 2em;
+        justify-content: center;
+        flex-direction: column;
+        width: 40em;
+        padding: 2em 3em;
+        gap: 1em;
+
+    }
+
+    .task-status{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .task-status ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        flex-direction: row;
+        gap: 1em;
+        margin: 0;
+        color: white;
+    }
+
+    .task-status button{
+        background: rgba(61,65,127,0.74);
+        font-size: 1.2em;
+        border: none;
+        border-radius: 1em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+        width: 9em;
+    }
+
+    .add-task button{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 1em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+        margin-top: 1.3em;
+        width: 28.6em;
+    }
+
+    .add-task{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .task-display{
+        background: rgba(13,4,45,0.86);
+        display: flex;
+
+        align-items: center;
+        flex-direction: column;
+        padding: 3em 10em 8.8em 10em;
+        height: auto;
+    }
+
+    .task-table{
+        background: rgba(20, 20, 56, 0.51);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 1em 1em 1em;
+        border: none;
+        border-radius: 2em;
+        height: auto;
+        width: 40em;
+
+    }
+
+    #task-container{
+        display: table-row-group;
+        color: white;
+        gap: 1em;
+
+    }
+
+    #task-container td{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        font-size: 1.2em;
+        padding: 2em 1em 0 1em;
+    }
+
+    .action-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #task-container td:first-child {
+        max-width: 200px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    #task-container tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 2em 0;
+        gap: 0;
+
+    }
+
+    #task-container th{
+        display: none;
+        flex-direction: row;
+        font-size: 1.4em;
+        font-weight: bold;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .window {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .window-content {
+        background-color: rgba(75,70,120,1);
+        padding: 2.5em 0 2.5em 0;
+        border-radius: 2em;
+        width: 350px;
+        text-align: center;
+    }
+
+    .window-content input {
+        padding: 1em;
+        border: 1px solid #ddd;
+        border-radius: 10em;
+        width: 20em;
+        margin-bottom: 2em;
+    }
+
+    .window-content button {
+        padding: 1em 2em;
+        background-color: rgba(61,90,170,0.5);
+        border: none;
+        border-radius: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .actionBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 10em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .editBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 10em;
+        color: white;
+        cursor: pointer;
+        margin-right: 0;
+    }
+
+    .text-state{
+        font-size: 1.2em;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .manager {
+        background: rgba(13,4,45,0.86);
+        display: flex;
+        padding: 4em 2em 0 2em;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .manager-bar{
+        display: flex;
+        background: rgba(20, 20, 56, 0.51);
+        border: none;
+        border-radius: 3em;
+        justify-content: center;
+        flex-direction: column;
+        width: 20em;
+        padding: 2em 3em;
+        gap: 1em;
+
+    }
+
+    .task-status{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .task-status ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+        margin: 0;
+        color: white;
+    }
+
+    .task-status button{
+        background: rgba(61,65,127,0.74);
+        font-size: 1.2em;
+        border: none;
+        border-radius: 2em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+        width: 10.3em;
+    }
+
+    .add-task button{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        padding: 1em 2em;
+        color: white;
+        cursor: pointer;
+        margin-top: 1.3em;
+        width: 10.3em;
+    }
+
+    .add-task{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .task-display{
+        background: rgba(13,4,45,0.86);
+        display: flex;
+
+        align-items: center;
+        flex-direction: column;
+        padding: 3em 10em 8.8em 10em;
+        height: auto;
+    }
+
+    .task-table{
+        background: rgba(20, 20, 56, 0.51);
+        padding: 1em 1em 1em 1em;
+        border: none;
+        border-radius: 3em;
+        height: auto;
+        width: 60em;
+
+    }
+
+    .task-table{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20em;
+    }
+
+    #task-container{
+        display: table-row-group;
+        color: white;
+        gap: 1em;
+
+    }
+
+    #task-container td{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.2em;
+        padding: 2em 1em 0 1em;
+    }
+
+    .action-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #task-container td:first-child {
+        max-width: 200px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    #task-container tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 2em 0;
+        gap: 0;
+
+    }
+
+    #task-container th{
+        display: none;
+        flex-direction: row;
+        font-size: 1.4em;
+        font-weight: bold;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .footer{
+        padding: 0;
+    }
+
+    .footer-content{
+        background: rgba(19,7,70,0.83);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 1em;
+        color: white;
+    }
+
+    .footer-content a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .window {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .window-content {
+        background-color: rgba(75,70,120,1);
+        padding: 2.5em 0 2.5em 0;
+        border-radius: 2em;
+        width: 350px;
+        text-align: center;
+    }
+
+    .window-content input {
+        padding: 1em;
+        border: 1px solid #ddd;
+        border-radius: 10em;
+        width: 20em;
+        margin-bottom: 2em;
+    }
+
+    .window-content button {
+        padding: 1em 2em;
+        background-color: rgba(61,90,170,0.5);
+        border: none;
+        border-radius: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .actionBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 10em;
+        color: white;
+        cursor: pointer;
+    }
+
+    .editBtn{
+        background: rgba(61,65,127,0.74);
+        border: none;
+        font-size: 1.2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 10em;
+        color: white;
+        cursor: pointer;
+        margin-right: 0;
+    }
+
+    .text-state{
+        font-size: 1.2em;
+    }
+
+}
+
