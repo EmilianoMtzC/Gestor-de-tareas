@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Castigo</title>
     <style>
       *{
         margin: 0;
@@ -98,6 +98,126 @@
         border-radius: 1em;
       }
 
+      #problema6 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #problema6 input {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema6 button {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema7 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #problema7 input {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema7 button {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema8 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #problema8 input {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema8 button {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema9 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #problema9 input {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema9 textarea {
+        padding: 0.5em;
+        font-size: 0.6em;
+        resize: none;
+        width: 30em;
+        height: 10em;
+      }
+
+      #btnsConvertidor {
+        display: flex;
+        list-style: none;
+        gap: 1em;
+      }
+
+      #problema9 button {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+        width: 10em;
+      }
+
+      #problema10 {
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      #problema10 input {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
+      #problema10 button {
+        padding: 0.5em;
+        font-size: 0.6em;
+        border-radius: 1em;
+      }
+
     </style>
 
 </head>
@@ -162,15 +282,57 @@
 
   <section class="ejercicio">
     <div id="problema6">
-      <input type="number" id="numMinutos" placeholder="">
+      <h2>Tiempo en minutos</h2>
+      <input type="number" id="numMinutos" placeholder="Ingresa los minutos">
+      <button id="btnConvertir">Convertir</button>
+      <p id="tiempoResultado"></p>
     </div>
   </section>
 
-  <section class="ejercicio"></section>
+  <section class="ejercicio7">
+    <div id="problema7">
+      <h2>Validar email</h2>
+      <input type="email" id="email" placeholder="Ingresa tu email">
+      <button id="btnValidar">Validar</button>
+      <p id="emailResultado"></p>
+    </div>\
+  </section>
 
-  <section class="ejercicio"></section>
+  <section class="ejercicio">
+    <div id="problema8">
+      <h2>Calculadora Promedio</h2>
+      <ul id="inputsProm">
+        <li><input type="number" id="numProm1" placeholder="Numero 1"></li>
+        <li><input type="number" id="numProm2" placeholder="Numero 2"></li>
+        <li><input type="number" id="numProm3" placeholder="Numero 3"></li>
+      </ul>
+      <button id="btnCalcularProm">Calcular</button>
+      <p id="promResultado"></p>
+    </div>
+  </section>
 
-  <section class="ejercicio"></section>
+  <section class="ejercicio">
+    <div id="problema9">
+      <h2>Convertidor de texto</h2>
+      <textarea id="textoConvertir" placeholder="Ingresa el texto a convertir"></textarea>
+      <ul id="btnsConvertidor">
+        <li><button id="btnMayusculas">Mayusculas</button></li>
+        <li><button id="btnMinusculas">Minusculas</button></li>
+        <li><button id="btnLongitud">Longitud</button></li>
+      </ul>
+      <p id="resultadoConvertir"></p>
+    </div>
+  </section>
+
+  <section class="ejercicio">
+    <div id="problema10">
+      <h2>Calculadora Descuento</h2>
+      <input type="number" id="precio" placeholder="Ingresa el precio">
+      <input type="number" id="descuento" placeholder="Ingresa el descuento">
+      <button id="btnCalcularDescuento">Aplicar Descuento</button>
+      <p id="descuentoResultado"></p>
+    </div>
+  </section>
 
 <script src="app.js"></script>
 </body>
